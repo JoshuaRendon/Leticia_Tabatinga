@@ -26,7 +26,7 @@ export default function Geologia() {
 
         {/* IZQUIERDA: Carrusel */}
         <div>
-          <h2>Mapas Geológicos</h2>
+          <h2>Mapas</h2>
           <PDFCarousel pdfs={pdfsGeologia} />
         </div>
 
