@@ -102,6 +102,151 @@
   line-height: 1.6;
 }
 
+/* Team (Nosotros) */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.member-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.member-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+}
+
+.member-img-wrapper {
+  width: 100%;
+  height: 180px;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.member-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.member-content {
+  padding: 1rem 1.25rem 1.5rem;
+}
+
+.member-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.4rem;
+}
+
+.member-desc {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.45;
+}
+
+/* Actions inside member cards */
+.member-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+  align-items: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.btn-cvlac {
+  background: linear-gradient(90deg,#5569f3,#7b5af8);
+  box-shadow: 0 6px 18px rgba(102,126,234,0.18);
+}
+
+.btn-orcid {
+  background: linear-gradient(90deg,#14a37f,#0bb192);
+  box-shadow: 0 6px 18px rgba(20,163,127,0.16);
+}
+
+@media (max-width: 480px) {
+  .member-img-wrapper { height: 140px; }
+  .member-actions { flex-direction: column; align-items: stretch; }
+  .btn { justify-content: center; }
+}
+
+/* Semillero card */
+.semillero-card {
+  background: linear-gradient(180deg, #ffffff, #fafafa);
+  border-radius: 12px;
+  padding: 0.6rem;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+.semillero-link {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.9rem 1rem;
+}
+
+.semillero-logo-wrapper { width: 120px; height: 70px; flex: 0 0 120px; display:flex; align-items:center; justify-content:center; overflow:hidden; border-radius:8px; background:#fff; }
+.semillero-logo { width:100%; height:100%; object-fit:contain; display:block }
+
+.semillero-content { display:flex; flex-direction:column; gap:0.2rem }
+.semillero-name { font-weight:700; color:#1f2937; font-size:1.05rem }
+.semillero-desc { color:#4b5563; font-size:0.95rem }
+.semillero-link-text { margin-top:6px; color:#2563eb; font-weight:600 }
+
+/* Contacto dentro de tarjetas */
+.member-contact { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:0.6rem; align-items:center }
+.contact-link { color:#333; text-decoration:none; font-weight:600; font-size:0.95rem }
+.contact-sep { color:#888; margin:0 4px }
+
+@media (max-width: 700px) {
+  .semillero-link { flex-direction: row; }
+  .semillero-logo-wrapper { width: 100px; height: 60px }
+}
+
+@media (max-width: 480px) {
+  .semillero-link { flex-direction: column; align-items:flex-start; gap:0.6rem }
+  .semillero-logo-wrapper { width: 100%; height: 60px }
+}
+
 /* Iframe Container */
 .iframe-container {
   margin-top: 2rem;
