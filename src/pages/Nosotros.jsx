@@ -8,9 +8,18 @@ export default function Nosotros() {
     {
       name: "Adriana Piña Fulano",
       image: "/images/team/Profesora_Adriana_Pina.jpg",
-      desc: "Directora del proyecto. Experta en hidrogeología e isotopía ambiental.",
+      desc: "Directora del proyecto. ",
       email: "appinaf@unal.edu.co",
       phone: "Tel +57 601 3165000 Ext. ",
+      cvlacUrl: "https://scienti.minciencias.gov.co/cvlac/visualizador/persona?ID=REPLACE_WITH_ID",
+      orcidId: "0000-0000-0000-0000"
+    },
+        {
+      name: "Arturo Samuel Gomez Insuasti",
+      image: "/images/team/Profesor_Arturo.webp",
+      desc: "Director del proyecto.",
+      email: "asgomezi@unal.edu.co",
+      phone: "Tel +57 608 5927996 Ext. ",
       cvlacUrl: "https://scienti.minciencias.gov.co/cvlac/visualizador/persona?ID=REPLACE_WITH_ID",
       orcidId: "0000-0000-0000-0000"
     },
@@ -40,7 +49,7 @@ export default function Nosotros() {
       <div className="semillero-card" style={{ marginTop: '1.5rem' }}>
         <a href="https://sites.google.com/unal.edu.co/agua-unal/investigaci%C3%B3n/siams?authuser=0" target="_blank" rel="noreferrer" className="semillero-link">
           <div className="semillero-logo-wrapper">
-            <img src="/images/logos/Semillero_logo.png" alt="Logo del semillero" className="semillero-logo" />
+            <img src="/images/team/logos/Semillero_logo.png" alt="Logo del semillero" className="semillero-logo" />
           </div>
           <div className="semillero-content">
             <div className="semillero-name">Semillero SIAMS - Agua UNAL</div>
