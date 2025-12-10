@@ -7,7 +7,7 @@ export default function Nosotros() {
   const team = [
     {
       name: "Adriana Piña Fulano",
-      image: "/images/team/Profesora_Adriana_Pina.jpg",
+      image: "/images/team/Profesora_Adriana_Pina.jpeg",
       desc: "Directora del proyecto. ",
       email: "appinaf@unal.edu.co",
       phone: "Tel +57 601 3165000 Ext. ",
@@ -16,7 +16,7 @@ export default function Nosotros() {
     },
         {
       name: "Arturo Samuel Gomez Insuasti",
-      image: "/images/team/Profesor_Arturo.webp",
+      image: "/images/team/Profesor_Arturo_Gomez.png",
       desc: "Director del proyecto.",
       email: "asgomezi@unal.edu.co",
       phone: "Tel +57 608 5927996 Ext. ",
@@ -29,10 +29,18 @@ export default function Nosotros() {
       desc: "Estudiante encargado del proyecto",
       email: "jorendona@unal.edu.co",
       phone: "Tel +57 601 3165000 Ext. 13474",
-      cvlacUrl: "https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0002124044",
+      cvlacUrl: "https://scienti.minciencias.gov.co/cvlac/visualizador/persona?ID=REPLACE_WITH_ID",
       orcidId: "0009-0000-6550-3467"
     },
-
+    {
+      name: "Laura Daniela Medina",
+      image: "/images/team/Estudiante_Laura_Medina.jpeg",
+      desc: "Estudiante encargada del proyecto",
+      email: "ldmedinago@unal.edu.co",
+      phone: "Tel +57 601 3165000 Ext. 13475",
+      cvlacUrl: "https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0002029764",
+      orcidId: "0000-0000-0000-0000"
+    },
     // Añade más objetos aquí según necesites
   ];
 

@@ -105,9 +105,22 @@
 /* Team (Nosotros) */
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* Mostrar 3 tarjetas por fila en pantallas grandes */
   gap: 1.5rem;
   margin-top: 1rem;
+}
+
+/* Responsive: 2 columnas en pantallas medianas, 1 en móviles */
+@media (max-width: 900px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .member-card {
