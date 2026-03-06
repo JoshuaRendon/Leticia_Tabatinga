@@ -124,6 +124,57 @@ export default function Nosotros() {
       <p style={{ marginTop: '1rem', color: '#444' }}>
         Nota: coloca las imágenes en <code>public/images/team/</code> y nómbralas como en el array (ej. <code>leticia.jpg</code>). Guarda el logo del semillero en <code>public/images/logos/semillero_logo.png</code>.
       </p>
+
+      {/* Colaboradores: logo, nombre, correo, teléfono y link a su web */}
+      <div style={{ marginTop: '2rem' }}>
+        <h2>Colaboradores</h2>
+        <p style={{ maxWidth: 900, color: '#444' }}>Organizaciones que apoyan o colaboran con el proyecto.</p>
+
+        {/* Sugerencia: guarda logos en public/images/collaborators/ */}
+        <div className="collab-grid" style={{ marginTop: '1rem' }}>
+          {(
+            // ejemplo de colaboradores — reemplaza/añade según necesites
+            [
+              {
+                name: 'Universidad Nacional de Colombia',
+                image: '/images/collaborators/unal_logo.png',
+                desc: 'Sede Bogotá - Facultad de Ingeniería',
+                email: 'contacto@unal.edu.co',
+                phone: '+57 601 3165000',
+                url: 'https://unal.edu.co'
+              },
+              {
+                name: 'Institución Aliada',
+                image: '/images/collaborators/aliado_logo.png',
+                desc: 'Centro de investigaciones aliado',
+                email: 'info@aliado.org',
+                phone: '+57 300 0000000',
+                url: 'https://aliado.org'
+              }
+            ]
+          ).map((c, i) => (
+            <div className="collab-card" key={i}>
+              <div className="collab-logo-wrapper">
+                <img className="collab-logo" src={c.image} alt={`Logo ${c.name}`} />
+              </div>
+              <div className="collab-content">
+                <div className="collab-name">{c.name}</div>
+                <div className="collab-desc">{c.desc}</div>
+
+                <div className="collab-contact">
+                  {c.email ? <a className="contact-link" href={`mailto:${c.email}`}>✉️ {c.email}</a> : null}
+                  {c.email && c.phone ? <span className="contact-sep">•</span> : null}
+                  {c.phone ? <a className="contact-link" href={`tel:${c.phone}`}>📞 {c.phone}</a> : null}
+                </div>
+
+                {c.url ? (
+                  <a className="btn btn-collab" href={c.url} target="_blank" rel="noreferrer">Visitar sitio</a>
+                ) : null}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

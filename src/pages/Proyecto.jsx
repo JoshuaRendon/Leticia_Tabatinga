@@ -16,7 +16,7 @@ export default function Proyecto() {
               <li>Levantar información hidrogeológica del acuífero aluvial de Leticia correspondiente a niveles de agua subterránea, parámetros fisicoquímicos e isotópicos.</li>
               <li>Construir modelos de mezcla a partir de la integración de datos hidro geoquímicos e isotópicos.</li>
               <li>Evaluar fuentes de recarga del acuífero a partir de información hidro geoquímica, isotópica y niveles freáticos.</li>
-              <li>•	Construir una herramienta digital que muestre de forma gráfica e interactiva los resultados del modelo geoquímico para la gestión y monitoreo del acuífero.</li>
+              <li>Construir una herramienta digital que muestre de forma gráfica e interactiva los resultados del modelo geoquímico para la gestión y monitoreo del acuífero.</li>
               {/* Añade más <li> según necesites — reemplaza el texto por tus objetivos reales */}
             </ul>
           </div>
