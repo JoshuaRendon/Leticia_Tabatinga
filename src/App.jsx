@@ -10,7 +10,7 @@ import Geologia from "./pages/MedioEstatico/Geologia";
 
 import MedioDinamico from "./pages/MedioDinamico/MedioDinamico";
 import Hidraulica from "./pages/MedioDinamico/Hidraulica";
-import Hidrogeoquimica from "./pages/MedioDinamico/Hidrogeoquimica";
+import Hidrogeoquimica from "./pages/MedioDinamico/Hidrogeoquimica/HidrogeoquimicaPage";
 import Isotopia from "./pages/MedioDinamico/Isotopia";
 
 import Nosotros from "./pages/Nosotros";

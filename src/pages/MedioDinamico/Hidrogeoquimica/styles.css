@@ -1,0 +1,324 @@
+.hydro-module {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.hydro-header {
+  display: grid;
+  grid-template-columns: 1.6fr 0.8fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.hydro-eyebrow,
+.irca-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #667eea;
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.hydro-header h1,
+.irca-card h2 {
+  margin: 0;
+  color: #1f2937;
+}
+
+.hydro-lead,
+.hydro-filter p,
+.irca-card__note,
+.point-item p {
+  color: #4b5563;
+}
+
+.hydro-filter {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.hydro-filter label {
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.hydro-filter select {
+  width: 100%;
+  padding: 0.8rem 0.95rem;
+  border: 1px solid rgba(102, 126, 234, 0.25);
+  border-radius: 10px;
+  background: white;
+  color: #1f2937;
+}
+
+.hydro-grid {
+  display: grid;
+  grid-template-columns: 2fr 0.8fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.hydro-map-card,
+.hydro-summary-card,
+.irca-card {
+  padding: 1rem;
+}
+
+.hydro-section-title,
+.irca-card__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: start;
+  margin-bottom: 0.9rem;
+}
+
+.hydro-section-title h2,
+.point-item h3 {
+  margin: 0;
+  color: #1f2937;
+}
+
+.hydro-section-title span {
+  background: #eef2ff;
+  color: #4338ca;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.irca-card__note {
+  margin: 0;
+  max-width: 60ch;
+  text-align: right;
+}
+
+.point-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.point-item {
+  border: 1px solid rgba(102, 126, 234, 0.15);
+  border-radius: 12px;
+  padding: 0.9rem;
+  background: #f8faff;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.point-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.point-chip {
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+}
+
+.irca-map-shell {
+  padding: 0.75rem;
+  border-radius: 12px;
+  border: 1px solid rgba(102, 126, 234, 0.12);
+  background: #fff;
+}
+
+.irca-map {
+  height: 760px;
+  border-radius: 10px;
+}
+
+/* Limit popup height and enable internal vertical scrolling */
+.leaflet-popup-content-wrapper .irca-popup {
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+/* Ensure popup inner content uses full width and shows scrollbar on the right */
+.irca-popup {
+  box-sizing: border-box;
+  padding-right: 8px;
+}
+
+/* Custom scrollbar for popup */
+.leaflet-popup-content-wrapper .irca-popup::-webkit-scrollbar {
+  width: 10px;
+}
+.leaflet-popup-content-wrapper .irca-popup::-webkit-scrollbar-track {
+  background: transparent;
+}
+.leaflet-popup-content-wrapper .irca-popup::-webkit-scrollbar-thumb {
+  background: rgba(102,126,234,0.4);
+  border-radius: 10px;
+}
+
+.irca-marker {
+  background: transparent;
+}
+
+.irca-marker__core {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  border: 2px solid white;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+}
+
+.irca-popup {
+  min-width: 300px;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.irca-popup__header h3 {
+  margin: 0.15rem 0 0;
+  color: #111827;
+}
+
+.irca-chip {
+  display: inline-flex;
+  align-items: center;
+  color: white;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  margin-top: 0.55rem;
+}
+
+.irca-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.irca-summary-grid div {
+  padding: 0.75rem;
+  border-radius: 10px;
+  background: #f8faff;
+  border: 1px solid rgba(102, 126, 234, 0.12);
+}
+
+.irca-summary-grid span {
+  display: block;
+  font-size: 0.78rem;
+  color: #6b7280;
+  margin-bottom: 0.2rem;
+}
+
+.irca-summary-grid strong {
+  color: #111827;
+}
+
+.irca-section {
+  border: 1px solid rgba(102, 126, 234, 0.12);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.irca-section__header {
+  width: 100%;
+  border: 0;
+  background: #f8faff;
+  color: #1f2937;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0.9rem;
+}
+
+.irca-section__content {
+  padding: 0.9rem;
+}
+
+.irca-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.irca-table td {
+  padding: 0.45rem 0;
+  border-bottom: 1px solid rgba(102, 126, 234, 0.08);
+  vertical-align: top;
+}
+
+.irca-table td:first-child {
+  width: 65%;
+  padding-right: 0.75rem;
+  color: #374151;
+}
+
+.irca-table td:last-child {
+  text-align: right;
+  color: #111827;
+}
+
+.irca-table-wrap {
+  overflow-x: auto;
+}
+
+.irca-legend-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.irca-legend-table th,
+.irca-legend-table td {
+  border-bottom: 1px solid rgba(102, 126, 234, 0.12);
+  padding: 0.85rem 0.75rem;
+  vertical-align: top;
+  text-align: left;
+}
+
+.irca-legend-table th {
+  background: #eef2ff;
+  color: #1f2937;
+}
+
+.irca-swatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  margin-right: 0.6rem;
+  vertical-align: middle;
+}
+
+@media (max-width: 1100px) {
+  .hydro-header,
+  .hydro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .irca-card__note {
+    text-align: left;
+  }
+
+  .irca-map {
+    height: 460px;
+  }
+}
+
+@media (max-width: 720px) {
+  .irca-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .point-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .irca-map {
+    height: 380px;
+  }
+}
