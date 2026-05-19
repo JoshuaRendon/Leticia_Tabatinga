@@ -56,7 +56,7 @@ export const hydroSites = [
     irca: 3.61,
     risk: "Sin riesgo",
     color: "#16a34a",
-    note: "Muestra de pozo con condiciones compatibles con agua apta para consumo humano.",
+    note: "Muestra de uno de los pozos de abastecimiento del campus de la Universidad Nacional sede Leticia.",
     parameters: {
       turbiedad: 1.74,
       colorAparente: 10,
@@ -94,7 +94,7 @@ export const hydroSites = [
     irca: 69.36,
     risk: "Alto",
     color: "#f97316",
-    note: "El valor del IRCA ubica esta muestra en riesgo alto según la clasificación de referencia.",
+    note: "Muestra de agua superficial del rio amazónas",
     parameters: {
       turbiedad: 512,
       colorAparente: 100,

@@ -1,0 +1,393 @@
+.hydro-page {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.hydro-hero {
+  display: grid;
+  grid-template-columns: 1.6fr 0.8fr;
+  gap: 1rem;
+  align-items: start;
+  padding: 1.2rem;
+}
+
+.hydro-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #667eea;
+  font-weight: 700;
+  font-size: 0.82rem;
+  margin-bottom: 0.35rem;
+}
+
+.hydro-hero h1,
+.hydro-section-title h2,
+.hydro-side-card h2,
+.hydro-chart-card h2 {
+  margin: 0;
+  color: #1f2937;
+}
+
+.hydro-lead,
+.hydro-info-card p,
+.hydro-empty-state,
+.hydro-series-list span,
+.hydro-range-card__header p {
+  color: #5b6479;
+}
+
+.hydro-info-card {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.hydro-info-card__label {
+  color: #667eea;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.hydro-layout {
+  display: grid;
+  grid-template-columns: 1.35fr 0.85fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.hydro-map-card,
+.hydro-side-card,
+.hydro-chart-card,
+.hydro-info-card {
+  padding: 1rem;
+}
+
+.hydro-section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.9rem;
+}
+
+.hydro-section-title span {
+  background: #eef2ff;
+  color: #4338ca;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.hydro-map-shell {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(102, 126, 234, 0.14);
+  background: #fff;
+}
+
+.hydro-map {
+  height: 680px;
+}
+
+.hydro-marker {
+  background: transparent;
+}
+
+.hydro-marker__core {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  border: 2px solid white;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+  background: #94a3b8;
+}
+
+.hydro-marker.is-active .hydro-marker__core {
+  background: #16a34a;
+}
+
+.hydro-marker.is-inactive .hydro-marker__core {
+  background: #94a3b8;
+}
+
+.hydro-map-popup strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.hydro-map-popup p {
+  margin: 0;
+  color: #5b6479;
+}
+
+.hydro-side-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.hydro-details-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.hydro-details-summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(102, 126, 234, 0.12);
+}
+
+.hydro-details-summary::-webkit-details-marker {
+  display: none;
+}
+
+.hydro-details-content {
+  padding: 1rem;
+}
+
+.hydro-section-title--compact {
+  margin-bottom: 0;
+}
+
+.hydro-point-meta {
+  display: grid;
+  gap: 0.65rem;
+  margin-bottom: 0.9rem;
+}
+
+.hydro-point-meta span,
+.hydro-range-values span,
+.hydro-mini-summary span {
+  display: block;
+  color: #6b7280;
+  font-size: 0.8rem;
+  margin-bottom: 0.15rem;
+}
+
+.hydro-point-meta strong,
+.hydro-mini-summary strong {
+  color: #111827;
+}
+
+.hydro-range-card {
+  display: grid;
+  gap: 0.85rem;
+  padding: 0.95rem;
+  border-radius: 12px;
+  background: #f8faff;
+  border: 1px solid rgba(102, 126, 234, 0.12);
+}
+
+.hydro-range-values {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.hydro-range-values div {
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.75rem;
+  border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.hydro-range-sliders {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.hydro-range-sliders label {
+  display: grid;
+  gap: 0.35rem;
+  color: #374151;
+  font-size: 0.9rem;
+}
+
+.hydro-range-sliders input[type="range"] {
+  width: 100%;
+}
+
+.hydro-mini-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.85rem;
+}
+
+.hydro-mini-summary div {
+  background: #f8faff;
+  border: 1px solid rgba(102, 126, 234, 0.12);
+  border-radius: 10px;
+  padding: 0.75rem;
+}
+
+.hydro-series-list {
+  list-style: none;
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.hydro-series-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.7rem 0.75rem;
+  border-radius: 10px;
+  background: #f8faff;
+  border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.hydro-chart-card {
+  padding: 1rem;
+}
+
+.hydro-chart-shell {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.hydro-chart-shell__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.hydro-svg-chart {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border: 1px solid rgba(102, 126, 234, 0.12);
+  border-radius: 12px;
+  overflow: visible;
+}
+
+.hydro-grid-line {
+  stroke: rgba(102, 126, 234, 0.12);
+  stroke-width: 1;
+}
+
+.hydro-axis-line {
+  stroke: rgba(31, 41, 55, 0.45);
+  stroke-width: 1.2;
+}
+
+.hydro-axis-label,
+.hydro-x-label {
+  fill: #4b5563;
+  font-size: 12px;
+}
+
+.hydro-x-label {
+  font-size: 11px;
+}
+
+.hydro-axis-title {
+  fill: #374151;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hydro-line {
+  fill: none;
+  stroke: #667eea;
+  stroke-width: 3;
+}
+
+.hydro-point {
+  fill: #16a34a;
+  stroke: white;
+  stroke-width: 2;
+  cursor: pointer;
+}
+
+.hydro-precip-bar {
+  fill: rgba(59, 130, 246, 0.35);
+  cursor: pointer;
+}
+
+.hydro-click-popup__box {
+  fill: rgba(15, 23, 42, 0.92);
+  stroke: rgba(148, 163, 184, 0.6);
+  stroke-width: 1;
+}
+
+.hydro-click-popup__text {
+  fill: #f8fafc;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.hydro-chart-legend {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  color: #374151;
+  font-size: 0.9rem;
+}
+
+.hydro-chart-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.hydro-legend-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.hydro-legend-swatch--level {
+  background: #16a34a;
+}
+
+.hydro-legend-swatch--precip {
+  background: rgba(59, 130, 246, 0.45);
+}
+
+.hydro-empty-state {
+  padding: 0.8rem 0;
+}
+
+@media (max-width: 1100px) {
+  .hydro-hero,
+  .hydro-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hydro-map {
+    height: 520px;
+  }
+}
+
+@media (max-width: 720px) {
+  .hydro-map {
+    height: 420px;
+  }
+
+  .hydro-range-values,
+  .hydro-mini-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .hydro-chart-shell__header,
+  .hydro-section-title {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hydro-details-summary,
+  .hydro-details-content {
+    padding: 0.85rem;
+  }
+}
