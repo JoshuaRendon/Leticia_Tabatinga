@@ -40,7 +40,7 @@ export default function HidrogeoquimicaPage() {
               </option>
             ))}
           </select>
-          <p>Por ahora solo está cargado Enero. Cuando agregues más meses, aparecerán aquí.</p>
+          <p>Selecciona el periodo de datos disponible..</p>
         </div>
       </header>
 
@@ -51,7 +51,7 @@ export default function HidrogeoquimicaPage() {
             <span>{selectedMonth}</span>
           </div>
           <HidrogeoquimicaMap
-            sites={hydroSites}
+            sites={visibleSites}
             selectedSiteId={selectedSite?.id}
             onSelectSite={setSelectedSiteId}
           />
