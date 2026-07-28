@@ -107,6 +107,15 @@
   background: #f8faff;
   display: grid;
   gap: 0.75rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.point-item:hover,
+.point-item.is-selected {
+  transform: translateY(-1px);
+  border-color: rgba(102, 126, 234, 0.35);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.1);
 }
 
 .point-meta {
@@ -134,6 +143,329 @@
 .irca-map {
   height: 760px;
   border-radius: 10px;
+}
+
+.piper-card {
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.piper-note {
+  margin: 0;
+  color: #4b5563;
+}
+
+.piper-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.piper-svg {
+  width: 100%;
+  min-height: 360px;
+  background: linear-gradient(180deg, #f8faff 0%, #ffffff 100%);
+  border: 1px solid rgba(102, 126, 234, 0.12);
+  border-radius: 14px;
+}
+
+.piper-outline {
+  fill: none;
+  stroke: #1f2937;
+  stroke-width: 2.25;
+  stroke-linejoin: round;
+}
+
+.piper-fill {
+  fill: rgba(148, 163, 184, 0.28);
+  stroke: none;
+}
+
+.piper-fill--diamond {
+  fill: rgba(148, 163, 184, 0.18);
+}
+
+.piper-grid-line {
+  stroke: rgba(17, 24, 39, 0.55);
+  stroke-dasharray: 4 4;
+  stroke-width: 1;
+}
+
+.piper-point {
+  fill: #667eea;
+  stroke: white;
+  stroke-width: 3;
+}
+
+.piper-point-hole {
+  fill: rgba(255, 255, 255, 0.35);
+}
+
+.piper-point-ring {
+  fill: none;
+  stroke: rgba(17, 24, 39, 0.22);
+  stroke-width: 2;
+}
+
+.piper-point--cation {
+  fill: #2563eb;
+}
+
+.piper-point--anion {
+  fill: #7c3aed;
+}
+
+.piper-point--diamond {
+  fill: #0f766e;
+}
+
+.piper-link {
+  stroke: rgba(102, 126, 234, 0.45);
+  stroke-width: 2;
+  stroke-dasharray: 5 5;
+}
+
+.piper-axis-label {
+  fill: #1f2937;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.piper-axis-label--rot-left,
+.piper-axis-label--rot-right {
+  font-size: 13px;
+}
+
+.piper-selected-label {
+  fill: #111827;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.piper-legend-text {
+  fill: #1f2937;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.piper-point-label {
+  fill: #1f2937;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.piper-warning-box {
+  fill: rgba(255, 255, 255, 0.92);
+  stroke: rgba(239, 68, 68, 0.35);
+  stroke-width: 1.5;
+}
+
+.piper-warning-text {
+  fill: #991b1b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.piper-warning-text--small {
+  font-size: 10.5px;
+  font-weight: 600;
+}
+
+.piper-summary {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.piper-legend {
+  opacity: 0.95;
+}
+
+.stiff-card {
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.stiff-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.stiff-svg {
+  width: 100%;
+  min-height: 360px;
+  border-radius: 14px;
+  border: 1px solid rgba(102, 126, 234, 0.12);
+  background: #ffffff;
+}
+
+.stiff-bg {
+  fill: #ffffff;
+}
+
+.stiff-axis {
+  stroke: #111827;
+  stroke-width: 2;
+}
+
+.stiff-axis--center {
+  stroke-dasharray: 6 4;
+}
+
+.stiff-grid {
+  stroke: rgba(17, 24, 39, 0.18);
+  stroke-width: 1;
+  stroke-dasharray: 4 4;
+}
+
+.stiff-area {
+  fill: rgba(37, 99, 235, 0.16);
+  stroke: rgba(37, 99, 235, 0.18);
+  stroke-width: 1;
+}
+
+.stiff-outline {
+  fill: none;
+  stroke: #ef4444;
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.stiff-label,
+.stiff-side-label,
+.stiff-value-label,
+.stiff-empty {
+  fill: #1f2937;
+  font-size: 13px;
+}
+
+.stiff-side-label {
+  font-weight: 700;
+}
+
+.stiff-side-label--small {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.stiff-value-label {
+  font-size: 11px;
+  fill: #6b7280;
+}
+
+.stiff-empty {
+  font-weight: 700;
+  fill: #b91c1c;
+}
+
+.stiff-summary {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.piper-percent-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.piper-percent-badge {
+  border: 1px solid rgba(102, 126, 234, 0.12);
+  border-radius: 12px;
+  background: #f8faff;
+  padding: 0.65rem 0.75rem;
+  display: grid;
+  gap: 0.2rem;
+}
+
+.piper-percent-badge span {
+  color: #6b7280;
+  font-size: 0.78rem;
+}
+
+.piper-percent-badge strong {
+  color: #111827;
+  font-size: 0.95rem;
+}
+
+.piper-summary__card {
+  border: 1px solid rgba(102, 126, 234, 0.12);
+  border-radius: 14px;
+  background: #fff;
+  padding: 0.95rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.piper-summary__card h3 {
+  margin: 0;
+  color: #1f2937;
+}
+
+.piper-summary__card p {
+  margin: 0;
+  color: #4b5563;
+}
+
+.piper-ion-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.piper-ion-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(102, 126, 234, 0.08);
+  padding-bottom: 0.35rem;
+}
+
+.piper-ion-list span {
+  color: #374151;
+}
+
+.piper-ion-list strong {
+  color: #111827;
+}
+
+.piper-ion-list small {
+  color: #6b7280;
+  font-size: 0.72rem;
+}
+
+.piper-missing {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.piper-chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.35rem 0.65rem;
+  background: #eef2ff;
+  color: #4338ca;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 1100px) {
+  .piper-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .stiff-layout {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Limit popup height and enable internal vertical scrolling */

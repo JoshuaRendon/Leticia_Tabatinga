@@ -1,13 +1,22 @@
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import HidrogeoquimicaMap from "./HidrogeoquimicaMap";
+import PiperDiagram from "./PiperDiagram";
+import StiffDiagram from "./StiffDiagram";
 import IRCALegendTable from "./IRCALegendTable";
 import { hydroSites, ircaMonths } from "./data";
 import "./styles.css";
 
 export default function HidrogeoquimicaPage() {
   const [selectedMonth, setSelectedMonth] = useState("Enero");
+  const visibleSites = useMemo(() => hydroSites.filter((site) => site.month === selectedMonth), [selectedMonth]);
+  const [selectedSiteId, setSelectedSiteId] = useState(visibleSites[0]?.id ?? hydroSites[0]?.id);
+  const selectedSite = visibleSites.find((site) => site.id === selectedSiteId) ?? visibleSites[0] ?? hydroSites[0];
 
-  const visibleSites = hydroSites.filter((site) => site.month === selectedMonth);
+  useEffect(() => {
+    if (visibleSites.length && !visibleSites.some((site) => site.id === selectedSiteId)) {
+      setSelectedSiteId(visibleSites[0].id);
+    }
+  }, [selectedMonth, selectedSiteId, visibleSites]);
 
   return (
     <div className="page-container hydro-module">
@@ -41,7 +50,11 @@ export default function HidrogeoquimicaPage() {
             <h2>Puntos del mes</h2>
             <span>{selectedMonth}</span>
           </div>
-          <HidrogeoquimicaMap />
+          <HidrogeoquimicaMap
+            sites={hydroSites}
+            selectedSiteId={selectedSite?.id}
+            onSelectSite={setSelectedSiteId}
+          />
         </div>
 
         <aside className="card hydro-summary-card">
@@ -52,7 +65,19 @@ export default function HidrogeoquimicaPage() {
 
           <div className="point-list">
             {visibleSites.map((site) => (
-              <article key={site.id} className="point-item">
+              <article
+                key={site.id}
+                className={`point-item ${site.id === selectedSite?.id ? "is-selected" : ""}`}
+                onClick={() => setSelectedSiteId(site.id)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    setSelectedSiteId(site.id);
+                  }
+                }}
+              >
                 <div>
                   <h3>{site.name}</h3>
                   <p>{site.note}</p>
@@ -68,6 +93,10 @@ export default function HidrogeoquimicaPage() {
           </div>
         </aside>
       </section>
+
+      <PiperDiagram sites={visibleSites} selectedSiteId={selectedSite?.id} onSelectSite={setSelectedSiteId} />
+
+      <StiffDiagram site={selectedSite} />
 
       <IRCALegendTable />
     </div>

@@ -14,7 +14,7 @@ function buildMarker(color) {
   });
 }
 
-export default function HidrogeoquimicaMap() {
+export default function HidrogeoquimicaMap({ sites = hydroSites, selectedSiteId, onSelectSite }) {
   return (
     <div className="irca-map-shell">
       <MapContainer center={[-4.22, -69.94]} zoom={12} scrollWheelZoom className="irca-map">
@@ -23,11 +23,17 @@ export default function HidrogeoquimicaMap() {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-        {hydroSites.map((site) => {
+        {sites.map((site) => {
           const band = classifyIrca(site.irca);
+          const active = site.id === selectedSiteId;
           return (
-            <Marker key={site.id} position={[site.lat, site.lng]} icon={buildMarker(band.color)}>
-                <Popup className="irca-popup-shell" maxWidth={480}>
+            <Marker
+              key={site.id}
+              position={[site.lat, site.lng]}
+              icon={buildMarker(active ? band.color : `${band.color}cc`)}
+              eventHandlers={onSelectSite ? { click: () => onSelectSite(site.id) } : undefined}
+            >
+              <Popup className="irca-popup-shell" maxWidth={480}>
                 <PointPopup site={site} />
               </Popup>
             </Marker>

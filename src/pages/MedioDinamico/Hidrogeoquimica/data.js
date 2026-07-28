@@ -83,6 +83,9 @@ export const hydroSites = [
       solidosSuspendidosTotales: 2.5,
       coliformesTotales: null,
       eColi: null,
+      sodio: 2.8109,
+      potasio: 2.2280,
+      bicarbonatos: 21.9463,
     },
   },
   {
@@ -121,6 +124,9 @@ export const hydroSites = [
       solidosSuspendidosTotales: 605,
       coliformesTotales: 1700,
       eColi: 1100,
+      sodio: 4.8861,
+      potasio: 3.8729,
+      bicarbonatos: 89.0044,
     },
   },
   {
@@ -159,6 +165,9 @@ export const hydroSites = [
       solidosSuspendidosTotales: 2.5,
       coliformesTotales: 9,
       eColi: 9,
+      sodio: 11.0128,
+      potasio: 8.7292,
+      bicarbonatos: 7.3154,
     },
   },
 ];
@@ -189,6 +198,9 @@ export const parameterOrder = [
   { key: "solidosSuspendidosTotales", label: "Sólidos suspendidos totales", unit: "mg/L" },
   { key: "coliformesTotales", label: "Coliformes totales", unit: "NMP/100 mL" },
   { key: "eColi", label: "E. coli", unit: "NMP/100 mL" },
+  { key: "sodio", label: "Sodio", unit: "mg/L Na⁺" },
+  { key: "potasio", label: "Potasio", unit: "mg/L K⁺" },
+  { key: "bicarbonatos", label: "Bicarbonatos", unit: "mg/L HCO₃⁻" },
 ];
 
 export function classifyIrca(value) {
